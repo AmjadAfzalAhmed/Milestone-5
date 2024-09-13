@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder Dynamic & Editable</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/html2pdf.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder Interactive & Editable</h1>
+        
+            <h2>Profile Picture</h2>
+            <input type="file" id="imageUpload" accept="image/*">
+
+        <div class="form-section">
+            <h2>Personal Details</h2>
+            <input type="text" id="fullName" placeholder="Full Name">
+            <input type="text" id="jobTitle" placeholder="Job Title">
+            <input type="email" id="email" placeholder="Email">
+            <input type="text" id="phone" placeholder="Phone Number">           
+
+            <h2>Educational Details</h2>
+            <input type="text" id="instituteName" placeholder="Institute">
+            <input type="text" id="degree" placeholder="Degree">
+            <input type="text" id="passingYear" placeholder="Year Passed">
+
+            <h2>Experience</h2>
+            <textarea id="experience" placeholder="Experience if any..."></textarea>
+
+            <h2>Skills</h2>
+            <input type="text" id="skills" placeholder="List all of your skills">
+            
+            <button onclick="createResume()">Create Resume</button>
+        </div>
+
+        <div class="resume-section" id="resume">
+            <h2>Created Resume</h2>
+            <div id="resumeContent" contenteditable=""></div>
+            
+            <button id="shareButton">Generate Shareable Link</button>            
+        </div>
+    </div>
+
+    <button id="print">Print Resume</button>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

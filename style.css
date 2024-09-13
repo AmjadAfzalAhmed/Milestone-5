@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+body {
+    background-color:#111924;
+    margin: 0;
+    padding: 20px;
+    font-family: 'SUSE', system-ui;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #e8c918;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);    
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+h2 {
+    color: #555;
+    margin-left: 70px;
+}
+
+input, textarea {
+    width: 70%;
+    padding: 15px;
+    margin: 15px 0 0 100px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+#imageUpload {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button {
+    display: block;
+    width: 20%;
+    padding: 10px;
+    background-color:#111924;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 20px 0 0 40%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1995ad;
+    box-shadow: 0 0 30px rgba(255,255,255,0.5);
+}
+
+.resume-section {
+    margin-top: 40px;
+    margin-left: 20px;
+    color: #fff;
+}
+
+#resumeContent {
+    background-color: #111924;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(200, 179, 179, 0.4);  
+    outline: none;  
+}
+
+.resume-section h2 {
+    margin-left: 280px;
+    color: #fff;
+    letter-spacing: 1px;    
+}
+
+img {
+    max-width: 150px;
+    border-radius: 10%;
+    position: relative;
+    left: 35%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#print {
+    background-color: #1995ad;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .resume-section * {
+        visibility: visible;
+    }
+    .resume-section h2 {
+        margin-left: 250px;
+    }
+
+    .resume-section {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        width: 90%;
+        margin: 0;
+        padding: 10px;
+        font-size: 12px; 
+        color: black; 
+    }
+    #resumeContent {
+        background-color: #fff; 
+        box-shadow: none;
+        padding: 10px;
+        border: none;
+    }
+
+    img {
+        max-width: 150px;
+        border-radius: 10%;
+        position: relative;
+        left: 35%;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+}
